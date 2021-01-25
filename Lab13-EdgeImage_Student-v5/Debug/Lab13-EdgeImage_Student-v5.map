@@ -1,0 +1,328 @@
+******************************************************************************
+              TMS320C55x Linker PC v4.4.1                      
+******************************************************************************
+>> Linked Wed Jan 06 21:25:43 2021
+
+OUTPUT FILE NAME:   <Lab13-EdgeImage_Student-v5.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00001dbb
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+                        (bytes)   (bytes)    (bytes)   (bytes)
+----------------------  --------  ---------  --------  --------  ----  --------
+  DARAM                 00000100   00007f00  00001f56  00005faa  RWIX
+  VECT                  00008000   00000100  00000000  00000100  RWIX
+  DARAM2                00008100   00007f00  00000f7a  00006f86  RWIX
+  SARAM                 00010000   00030000  00000000  00030000  RWIX
+  SDRAM                 00040000   003e0000  00000000  003e0000  RWIX
+
+
+SECTION ALLOCATION MAP
+(Addresses surrounded by []'s are displayed for convenience only!)
+
+output                                                          attributes/
+section   page  orgn(bytes) orgn(words) len(bytes) len(words)   input sections
+--------  ----  ----------- ----------- ---------- ----------   --------------
+.pinit       0   [ 00000100 ]  00000080          *   00000000   UNINITIALIZED
+
+.text        0     00000100  [ 00000080 ] 00001d6e          *   
+                   00000100  [ 00000080 ] 00000543          *   rts55x.lib : lowlev.obj (.text)
+                   00000643  [ 00000321+] 00000528          *              : trgdrv.obj (.text)
+                   00000b6b  [ 000005b5+] 000004b5          *              : memory.obj (.text)
+                   00001020  [ 00000810 ] 0000027f          *              : fopen.obj (.text)
+                   0000129f  [ 0000094f+] 000001f3          *   EdgeImage.obj (.text)
+                   00001492  [ 00000a49 ] 00000163          *   rts55x.lib : fputs.obj (.text)
+                   000015f5  [ 00000afa+] 0000010f          *              : fread.obj (.text)
+                   00001704  [ 00000b82 ] 000000e6          *              : setvbuf.obj (.text)
+                   000017ea  [ 00000bf5 ] 000000dd          *              : _io_perm.obj (.text)
+                   000018c7  [ 00000c63+] 000000c2          *              : fflush.obj (.text)
+                   00001989  [ 00000cc4+] 000000ba          *              : trgmsg.obj (.text:CIO_breakpoint)
+                   00001a43  [ 00000d21+] 000000ae          *              : _bufread.obj (.text)
+                   00001af1  [ 00000d78+] 0000007b          *              : fclose.obj (.text)
+                   00001b6c  [ 00000db6 ] 0000006d          *              : trgmsg.obj (.text)
+                   00001bd9  [ 00000dec+] 0000006b          *              : fseek.obj (.text)
+                   00001c44  [ 00000e22 ] 00000062          *   SharpenImageSub.obj (.text)
+                   00001ca6  [ 00000e53 ] 0000004d          *   rts55x.lib : autoinit.obj (.text)
+                   00001cf3  [ 00000e79+] 0000004b          *              : args_main.obj (.text)
+                   00001d3e  [ 00000e9f ] 0000003f          *              : memcpy.obj (.text)
+                   00001d7d  [ 00000ebe+] 0000003e          *              : exit.obj (.text)
+                   00001dbb  [ 00000edd+] 00000034          *              : boot.obj (.text)
+                   00001def  [ 00000ef7+] 0000002f          *   EdgeImageSub.obj (.text)
+                   00001e1e  [ 00000f0f ] 0000002a          *   rts55x.lib : udiv.obj (.text)
+                   00001e48  [ 00000f24 ] 00000012          *              : _lock.obj (.text)
+                   00001e5a  [ 00000f2d ] 0000000a          *              : remove.obj (.text)
+                   00001e64  [ 00000f32 ] 00000007          *              : exit.obj (.text:CIO_breakpoint)
+                   00001e6b  [ 00000f35+] 00000002          *              : vectors.obj (.text)
+                   00001e6d  [ 00000f36 ] 00000001          *   --HOLE-- [fill = 20]
+
+.cinit       0   [ 00001e6e ]  00000f37          *   00000074   
+                 [ 00001e6e ]  00000f37          *   0000002d   rts55x.lib : lowlev.obj (.cinit)
+                 [ 00001ec8 ]  00000f64          *   0000002a              : defs.obj (.cinit)
+                 [ 00001f1c ]  00000f8e          *   0000000a              : _lock.obj (.cinit)
+                 [ 00001f30 ]  00000f98          *   0000000a              : exit.obj (.cinit)
+                 [ 00001f44 ]  00000fa2          *   00000004              : fopen.obj (.cinit)
+                 [ 00001f4c ]  00000fa6          *   00000004              : memory.obj (.cinit)
+                 [ 00001f54 ]  00000faa          *   00000001   --HOLE-- [fill = 0]
+
+vectors      0     00001f58  [ 00000fac ] 00000100          *   
+                   00001f58  [ 00000fac ] 00000100          *   rts55x.lib : vectors.obj (vectors)
+
+.bss         0   [ 00008100 ]  00004080          *   00000275   UNINITIALIZED
+                 [ 00008100 ]  00004080          *   00000119   rts55x.lib : defs.obj (.bss)
+                 [ 00008332 ]  00004199          *   000000d0              : trgdrv.obj (.bss)
+                 [ 000084d2 ]  00004269          *   00000001   EdgeImageSub.obj (.bss)
+                 [ 000084d4 ]  0000426a          *   00000071   rts55x.lib : lowlev.obj (.bss)
+                 [ 000085b6 ]  000042db          *   00000001   SharpenImageSub.obj (.bss)
+                 [ 000085b8 ]  000042dc          *   0000000a   EdgeImage.obj (.bss)
+                 [ 000085cc ]  000042e6          *   00000006   rts55x.lib : memory.obj (.bss)
+                 [ 000085d8 ]  000042ec          *   00000004              : _lock.obj (.bss)
+                 [ 000085e0 ]  000042f0          *   00000004              : exit.obj (.bss)
+                 [ 000085e8 ]  000042f4          *   00000001              : fopen.obj (.bss)
+
+.sysmem      0   [ 000085ea ]  000042f5          *   00000200   UNINITIALIZED
+                 [ 000085ea ]  000042f5          *   00000200   --HOLE--
+
+.cio         0   [ 000089f0 ]  000044f8          *   00000120   UNINITIALIZED
+                 [ 000089f0 ]  000044f8          *   00000120   rts55x.lib : trgmsg.obj (.cio)
+
+.stack       0   [ 00008c30 ]  00004618          *   000000fa   UNINITIALIZED
+                 [ 00008c30 ]  00004618          *   000000fa   --HOLE--
+
+.sysstack 
+*            0   [ 00008e24 ]  00004712          *   000000fa   UNINITIALIZED
+                 [ 00008e24 ]  00004712          *   000000fa   --HOLE--
+
+.const       0   [ 00009018 ]  0000480c          *   00000034   
+                 [ 00009018 ]  0000480c          *   00000031   EdgeImage.obj (.const:.string)
+                 [ 0000907a ]  0000483d          *   00000001   --HOLE-- [fill = 0]
+                 [ 0000907c ]  0000483e          *   00000002   rts55x.lib : fputs.obj (.const:.string)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000001                $TI_capability_requires_rev2
+            00004080    .bss
+00000100                .text
+00001e65                C$$EXIT
+00001a3e                C$$IO$$
+00001e1e                I$$UDIV
+00001e33                I$$UMOD
+00001def                _EdgeImageSub
+000013a9                _Edge_Grey_Image
+00000b0d                _HOSTclock
+00000aa2                _HOSTclose
+000009ed                _HOSTlseek
+0000094e                _HOSTopen
+000008c1                _HOSTread
+00000813                _HOSTrename
+000007b5                _HOSTtime
+0000074b                _HOSTunlink
+000006be                _HOSTwrite
+            000042dd    _ImageHeight
+            000042dc    _ImageWidth
+00001309                _Read_Grey_Image
+00001f58                _Reset
+00001c44                _ShapenImageSub
+            000042e2    _Threshhold
+            000044f8    __CIOBUF_
+            00004712    __STACK_END
+000001f4                __STACK_SIZE
+00000400                __SYSMEM_SIZE
+000001f4                __SYSSTACK_SIZE
+00000001                __TI_args_main
+ffffffff                ___binit__
+            00004080    ___bss__
+ffffffff                ___c_args__
+            00000f37    ___cinit__
+            000042f5    ___end__
+00001e6e                ___etext__
+ffffffff                ___pinit__
+00000100                ___text__
+00001cf3                __args_main
+00001a43                __buff_read
+00001141                __cleanup
+            000042f0    __cleanup_ptr
+00001e1e                __divu
+000018c7                __doflush
+            000042f2    __dtors_ptr
+            00004198    __ft_end
+            00004080    __ftable
+            000042ec    __lock
+00001e58                __nop
+0000186a                __rd_ok
+00001e50                __register_lock
+00001e48                __register_unlock
+00001e33                __remu
+            00004618    __stack
+            000042f5    __sys_memory
+            00004712    __sysstack
+            000040f8    __tmpnams
+            000042ee    __unlock
+000017ea                __wrt_ok
+00001e64                _abort
+00000553                _add_device
+            000042e4    _alpha
+00001ca6                _auto_init
+            000042de    _buffer_grey
+            000042e0    _buffer_org
+00001dbb                _c_int00
+00000ffa                _calloc
+00000ff2                _chkheap
+000004e0                _close
+00001d7d                _exit
+00001af1                _fclose
+00001930                _fflush
+000004d7                _find_registered_device
+00001264                _fopen
+00001492                _fputs
+000015f5                _fread
+00000b6b                _free
+00000f9c                _free_memory
+0000119b                _freopen
+00001bd9                _fseek
+00000643                _getenv
+00000471                _lseek
+0000129f                _main
+00000c9c                _malloc
+00000f42                _max_free
+00001d3e                _memcpy
+00000c37                _minit
+000003b2                _open
+000015c7                _puts
+00000304                _read
+00001b6c                _readmsg
+00000d91                _realloc
+00001e5a                _remove
+000002ce                _remove_device
+00000275                _rename
+00001704                _setvbuf
+00000242                _unlink
+00000100                _write
+00001989                _writemsg
+ffffffff                binit
+            00000f37    cinit
+            000042f5    end
+00001e6e                etext
+ffffffff                pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000001                $TI_capability_requires_rev2
+00000001                __TI_args_main
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000100                .text
+00000100                ___text__
+00000100                _write
+000001f4                __STACK_SIZE
+000001f4                __SYSSTACK_SIZE
+00000242                _unlink
+00000275                _rename
+000002ce                _remove_device
+00000304                _read
+000003b2                _open
+00000400                __SYSMEM_SIZE
+00000471                _lseek
+000004d7                _find_registered_device
+000004e0                _close
+00000553                _add_device
+00000643                _getenv
+000006be                _HOSTwrite
+0000074b                _HOSTunlink
+000007b5                _HOSTtime
+00000813                _HOSTrename
+000008c1                _HOSTread
+0000094e                _HOSTopen
+000009ed                _HOSTlseek
+00000aa2                _HOSTclose
+00000b0d                _HOSTclock
+00000b6b                _free
+00000c37                _minit
+00000c9c                _malloc
+00000d91                _realloc
+00000f42                _max_free
+00000f9c                _free_memory
+00000ff2                _chkheap
+00000ffa                _calloc
+00001141                __cleanup
+0000119b                _freopen
+00001264                _fopen
+0000129f                _main
+00001309                _Read_Grey_Image
+000013a9                _Edge_Grey_Image
+00001492                _fputs
+000015c7                _puts
+000015f5                _fread
+00001704                _setvbuf
+000017ea                __wrt_ok
+0000186a                __rd_ok
+000018c7                __doflush
+00001930                _fflush
+00001989                _writemsg
+00001a3e                C$$IO$$
+00001a43                __buff_read
+00001af1                _fclose
+00001b6c                _readmsg
+00001bd9                _fseek
+00001c44                _ShapenImageSub
+00001ca6                _auto_init
+00001cf3                __args_main
+00001d3e                _memcpy
+00001d7d                _exit
+00001dbb                _c_int00
+00001def                _EdgeImageSub
+00001e1e                I$$UDIV
+00001e1e                __divu
+00001e33                I$$UMOD
+00001e33                __remu
+00001e48                __register_unlock
+00001e50                __register_lock
+00001e58                __nop
+00001e5a                _remove
+00001e64                _abort
+00001e65                C$$EXIT
+            00000f37    ___cinit__
+00001e6e                ___etext__
+            00000f37    cinit
+00001e6e                etext
+00001f58                _Reset
+            00004080    .bss
+            00004080    ___bss__
+            00004080    __ftable
+            000040f8    __tmpnams
+            00004198    __ft_end
+            000042dc    _ImageWidth
+            000042dd    _ImageHeight
+            000042de    _buffer_grey
+            000042e0    _buffer_org
+            000042e2    _Threshhold
+            000042e4    _alpha
+            000042ec    __lock
+            000042ee    __unlock
+            000042f0    __cleanup_ptr
+            000042f2    __dtors_ptr
+            000042f5    ___end__
+            000042f5    __sys_memory
+            000042f5    end
+            000044f8    __CIOBUF_
+            00004618    __stack
+            00004712    __STACK_END
+            00004712    __sysstack
+ffffffff                ___binit__
+ffffffff                ___c_args__
+ffffffff                ___pinit__
+ffffffff                binit
+ffffffff                pinit
+
+[106 symbols]

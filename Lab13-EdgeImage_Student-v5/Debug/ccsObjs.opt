@@ -1,0 +1,1 @@
+"./SharpenImageSub.obj" "./EdgeImageSub.obj" "./EdgeImage.obj" "../EdgeImage.cmd" -l"libc.a" 

@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<link_info>
+   <banner>TMS320C55x Linker PC v4.4.1</banner>
+   <copyright>Copyright (c) 1996-2012 Texas Instruments Incorporated</copyright>
+   <link_time>0x5ffafe7b</link_time>
+   <output_file>lab05.out</output_file>
+   <entry_point>
+      <name>start</name>
+      <address>0x100</address>
+   </entry_point>
+   <input_file_list>
+      <input_file id="fl-2">
+         <path>C:\Lab05-ASM-Division_Teaching\Debug\</path>
+         <kind>object</kind>
+         <file>lab05.obj</file>
+         <name>lab05.obj</name>
+      </input_file>
+   </input_file_list>
+   <object_component_list>
+      <object_component id="oc-5">
+         <name>.text</name>
+         <load_address>0x100</load_address>
+         <run_address>0x100</run_address>
+         <size>0x41</size>
+         <input_file_ref idref="fl-2"/>
+      </object_component>
+      <object_component id="oc-6">
+         <name>.bss</name>
+         <uninitialized>true</uninitialized>
+         <run_address>0x142</run_address>
+         <size>0x6</size>
+         <input_file_ref idref="fl-2"/>
+      </object_component>
+      <object_component id="oc-7">
+         <name>.debug_info</name>
+         <load_address>0x0</load_address>
+         <run_address>0x0</run_address>
+         <size>0xbe</size>
+         <input_file_ref idref="fl-2"/>
+      </object_component>
+      <object_component id="oc-14">
+         <name>.debug_info</name>
+         <load_address>0xbe</load_address>
+         <run_address>0xbe</run_address>
+         <size>0x6e</size>
+      </object_component>
+      <object_component id="oc-8">
+         <name>.debug_line</name>
+         <load_address>0x0</load_address>
+         <run_address>0x0</run_address>
+         <size>0x4d</size>
+         <input_file_ref idref="fl-2"/>
+      </object_component>
+      <object_component id="oc-9">
+         <name>.debug_abbrev</name>
+         <load_address>0x0</load_address>
+         <run_address>0x0</run_address>
+         <size>0x2c</size>
+         <input_file_ref idref="fl-2"/>
+      </object_component>
+      <object_component id="oc-15">
+         <name>.debug_abbrev</name>
+         <load_address>0x2c</load_address>
+         <run_address>0x2c</run_address>
+         <size>0xd</size>
+      </object_component>
+   </object_component_list>
+   <logical_group_list>
+      <logical_group id="lg-2">
+         <name>.text</name>
+         <load_address>0x100</load_address>
+         <run_address>0x100</run_address>
+         <size>0x42</size>
+         <contents>
+            <object_component_ref idref="oc-5"/>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-3">
+         <name>.bss</name>
+         <run_address>0x142</run_address>
+         <size>0x6</size>
+         <contents>
+            <object_component_ref idref="oc-6"/>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-4">
+         <name>.stack</name>
+         <run_address>0x0</run_address>
+         <size>0x0</size>
+         <contents>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-d">
+         <name>.debug_info</name>
+         <load_address>0x0</load_address>
+         <run_address>0x0</run_address>
+         <size>0x12c</size>
+         <contents>
+            <object_component_ref idref="oc-7"/>
+            <object_component_ref idref="oc-14"/>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-f">
+         <name>.debug_line</name>
+         <load_address>0x0</load_address>
+         <run_address>0x0</run_address>
+         <size>0x4d</size>
+         <contents>
+            <object_component_ref idref="oc-8"/>
+         </contents>
+      </logical_group>
+      <logical_group id="lg-11">
+         <name>.debug_abbrev</name>
+         <load_address>0x0</load_address>
+         <run_address>0x0</run_address>
+         <size>0x39</size>
+         <contents>
+            <object_component_ref idref="oc-9"/>
+            <object_component_ref idref="oc-15"/>
+         </contents>
+      </logical_group>
+   </logical_group_list>
+   <placement_map>
+      <memory_area>
+         <name>DARAM</name>
+         <page_id>0x0</page_id>
+         <origin>0x100</origin>
+         <length>0x7f00</length>
+         <used_space>0x48</used_space>
+         <unused_space>0x7eb8</unused_space>
+         <attributes>RWIX</attributes>
+         <usage_details>
+            <allocated_space>
+               <start_address>0x100</start_address>
+               <size>0x42</size>
+               <logical_group_ref idref="lg-2"/>
+            </allocated_space>
+            <allocated_space>
+               <start_address>0x142</start_address>
+               <size>0x6</size>
+               <logical_group_ref idref="lg-3"/>
+            </allocated_space>
+            <available_space>
+               <start_address>0x148</start_address>
+               <size>0x7eb8</size>
+            </available_space>
+         </usage_details>
+      </memory_area>
+      <memory_area>
+         <name>DARAM2</name>
+         <page_id>0x0</page_id>
+         <origin>0x8000</origin>
+         <length>0x8000</length>
+         <used_space>0x0</used_space>
+         <unused_space>0x8000</unused_space>
+         <attributes>RWIX</attributes>
+         <usage_details>
+         </usage_details>
+      </memory_area>
+   </placement_map>
+   <symbol_table>
+      <symbol id="sm-0">
+         <name>$TI_capability$C5500$CallingConvention</name>
+         <value>0x2</value>
+      </symbol>
+      <symbol id="sm-1">
+         <name>$TI_capability$C5500$MemoryModel</name>
+         <value>0x2</value>
+      </symbol>
+      <symbol id="sm-2">
+         <name>$TI_capability_requires_rev2</name>
+         <value>0x1</value>
+      </symbol>
+      <symbol id="sm-3">
+         <name>cinit</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-4">
+         <name>___cinit__</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-5">
+         <name>pinit</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-6">
+         <name>___pinit__</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-7">
+         <name>binit</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-8">
+         <name>___binit__</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-9">
+         <name>___c_args__</name>
+         <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-a">
+         <name>.text</name>
+         <value>0x100</value>
+      </symbol>
+      <symbol id="sm-b">
+         <name>___text__</name>
+         <value>0x100</value>
+      </symbol>
+      <symbol id="sm-c">
+         <name>etext</name>
+         <value>0x142</value>
+      </symbol>
+      <symbol id="sm-d">
+         <name>___etext__</name>
+         <value>0x142</value>
+      </symbol>
+      <symbol id="sm-e">
+         <name>.bss</name>
+         <value>0x142</value>
+      </symbol>
+      <symbol id="sm-f">
+         <name>___bss__</name>
+         <value>0x142</value>
+      </symbol>
+      <symbol id="sm-10">
+         <name>end</name>
+         <value>0x148</value>
+      </symbol>
+      <symbol id="sm-11">
+         <name>___end__</name>
+         <value>0x148</value>
+      </symbol>
+      <symbol id="sm-27">
+         <name>start</name>
+         <value>0x100</value>
+         <object_component_ref idref="oc-5"/>
+      </symbol>
+      <symbol id="sm-28">
+         <name>z</name>
+         <value>0x146</value>
+         <object_component_ref idref="oc-6"/>
+      </symbol>
+      <symbol id="sm-29">
+         <name>y</name>
+         <value>0x144</value>
+         <object_component_ref idref="oc-6"/>
+      </symbol>
+      <symbol id="sm-2a">
+         <name>x</name>
+         <value>0x142</value>
+         <object_component_ref idref="oc-6"/>
+      </symbol>
+   </symbol_table>
+</link_info>

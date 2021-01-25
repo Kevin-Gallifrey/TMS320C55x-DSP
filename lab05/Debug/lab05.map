@@ -1,0 +1,90 @@
+******************************************************************************
+              TMS320C55x Linker PC v4.4.1                      
+******************************************************************************
+>> Linked Sun Jan 10 21:17:47 2021
+
+OUTPUT FILE NAME:   <lab05.out>
+ENTRY POINT SYMBOL: "start"  address: 00000100
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+                        (bytes)   (bytes)    (bytes)   (bytes)
+----------------------  --------  ---------  --------  --------  ----  --------
+  DARAM                 00000100   00007f00  00000048  00007eb8  RWIX
+  DARAM2                00008000   00008000  00000000  00008000  RWIX
+
+
+SECTION ALLOCATION MAP
+(Addresses surrounded by []'s are displayed for convenience only!)
+
+output                                                          attributes/
+section   page  orgn(bytes) orgn(words) len(bytes) len(words)   input sections
+--------  ----  ----------- ----------- ---------- ----------   --------------
+.text        0     00000100  [ 00000080 ] 00000042          *   
+                   00000100  [ 00000080 ] 00000041          *   lab05.obj (.text)
+                   00000141  [ 000000a0 ] 00000001          *   --HOLE-- [fill = 20]
+
+.bss         0   [ 00000142 ]  000000a1          *   00000003   UNINITIALIZED
+                 [ 00000142 ]  000000a1          *   00000003   lab05.obj (.bss)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000001                $TI_capability_requires_rev2
+            000000a1    .bss
+00000100                .text
+ffffffff                ___binit__
+            000000a1    ___bss__
+ffffffff                ___c_args__
+ffffffff                ___cinit__
+            000000a4    ___end__
+00000142                ___etext__
+ffffffff                ___pinit__
+00000100                ___text__
+ffffffff                binit
+ffffffff                cinit
+            000000a4    end
+00000142                etext
+ffffffff                pinit
+00000100                start
+            000000a1    x
+            000000a2    y
+            000000a3    z
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000001                $TI_capability_requires_rev2
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000100                .text
+00000100                ___text__
+00000100                start
+            000000a1    .bss
+            000000a1    ___bss__
+00000142                ___etext__
+00000142                etext
+            000000a1    x
+            000000a2    y
+            000000a3    z
+            000000a4    ___end__
+            000000a4    end
+ffffffff                ___binit__
+ffffffff                ___c_args__
+ffffffff                ___cinit__
+ffffffff                ___pinit__
+ffffffff                binit
+ffffffff                cinit
+ffffffff                pinit
+
+[22 symbols]

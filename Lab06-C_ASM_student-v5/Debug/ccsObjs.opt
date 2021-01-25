@@ -1,0 +1,1 @@
+"./mySub.obj" "./lab06.obj" "../lab06.CMD" -l"libc.a" 

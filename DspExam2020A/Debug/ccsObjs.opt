@@ -1,0 +1,1 @@
+"./MedianImageSub.obj" "./DspExam2020A.obj" "../MedianImage.cmd" -l"libc.a" 
